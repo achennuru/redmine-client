@@ -1,0 +1,2 @@
+cat execstub.sh target/easy-*-jar-with-dependencies.jar > target/enghouse-easy
+chmod +x target/enghouse-easy
