@@ -92,7 +92,7 @@ public class RedmineConnector {
 		timeEntry.setHours(Float.valueOf((String) settings.get("hours")));
 		timeEntry.setComment((String) settings.get("comment"));
 		System.out.println(timeEntry);
-		//mgr.getTimeEntryManager().createTimeEntry(timeEntry);
+		mgr.getTimeEntryManager().createTimeEntry(timeEntry);
 		saveProfile(timeEntry);
 	}
 
