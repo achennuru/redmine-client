@@ -1,7 +1,5 @@
 # Redmine Client
-## Fixing the project URL:
-Please make sure that src/main/java/com/redmine/easy/RedmineConnector.java URI
-URI = "";
+
 ## Building
 ```bash
 mvn install
