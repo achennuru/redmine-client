@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.enghouse.netboss</groupId>
+	<groupId>com.redmine.easy</groupId>
 	<artifactId>easy</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -69,7 +69,7 @@
 							<archive>
 								<manifest>
 									<mainClass>
-										com.enghouse.netboss.easy.TimeCollectWizard
+										com.redmine.easy.TimeCollectWizard
 									</mainClass>
 								</manifest>
 							</archive>
@@ -93,10 +93,10 @@
 						<configuration>
 							<headerType>console</headerType>
 							<jar>target/easy-0.0.1-SNAPSHOT-jar-with-dependencies.jar</jar>
-							<outfile>target/enghouse-easy.exe</outfile>
+							<outfile>target/redmine-easy.exe</outfile>
 							<downloadUrl>http://java.com/download</downloadUrl>
 							<classPath>
-								<mainClass>com.enghouse.netboss.easy.TimeCollectWizard</mainClass>
+								<mainClass>com.redmine.easy.TimeCollectWizard</mainClass>
 							</classPath>
 							<jre>
 								<bundledJre64Bit>false</bundledJre64Bit>

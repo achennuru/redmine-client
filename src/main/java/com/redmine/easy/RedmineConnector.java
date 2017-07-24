@@ -22,7 +22,7 @@ import com.taskadapter.redmineapi.bean.TimeEntryFactory;
 public class RedmineConnector {
 	private RedmineManager mgr = null;
 
-	private static final String URI = "https://projects.enghouse.com";
+	private static final String URI = "<<Redmine URL>>";
 
 	private static final String PROFILE_FILE = System.getProperty("java.io.tmpdir") + "/.timecollect.profile";
 

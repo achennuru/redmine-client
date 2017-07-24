@@ -53,6 +53,7 @@ public class TimeCollectWizard extends JDialog {
 				thumb.setIcon(icon);
 
 				add(thumb);
+				add(new JLabel("                                                               "));
 				JTextField userField = new JTextField(30);
 				userField.setName("userField");
 				add(new JLabel("UserName"));
@@ -367,7 +368,7 @@ public class TimeCollectWizard extends JDialog {
 	public static void main(String[] args) {
 		LogTimeParser argumentParser = new LogTimeParser(args);
 		TimeCollectWizard timeCollect = new TimeCollectWizard();
-		if (argumentParser.getArguments().size() > 0) {
+		if (argumentParser.getProfilePath() != null) {
 			cli(argumentParser, timeCollect);
 		}
 		timeCollect.pack();
