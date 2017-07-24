@@ -1,2 +1,12 @@
-# redmine-client
-This project is an example to be able to dynamically create tasks and enter timesheets using profiles.
+# Redmine Connector
+## Building
+```bash
+mvn install
+```
+* This command creates and executable and self contained jar.
+* Use com.enghouse.netboss.easy.CreateTask class to dynamically create tasks.
+## Building unix executable.
+Execute the following command to build an executable for unix environment.
+```bash
+./generate-executable
+```
