@@ -10,3 +10,13 @@ Execute the following command to build an executable for unix environment.
 ```bash
 ./generate-executable
 ```
+# Executing the client
+## Unix
+```bash
+target/redmine-easy
+```
+## Windows
+
+```bash
+target/redmine-easy.exe
+```
