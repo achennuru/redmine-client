@@ -22,8 +22,6 @@ import com.taskadapter.redmineapi.bean.TimeEntryFactory;
 public class RedmineConnector {
 	private RedmineManager mgr = null;
 
-	private static final String URI = "<<Redmine URL>>";
-
 	private static final String PROFILE_FILE = System.getProperty("java.io.tmpdir") + "/.timecollect.profile";
 
 	private List<Project> cachedProjects = new ArrayList<>();
@@ -94,7 +92,7 @@ public class RedmineConnector {
 		timeEntry.setHours(Float.valueOf((String) settings.get("hours")));
 		timeEntry.setComment((String) settings.get("comment"));
 		System.out.println(timeEntry);
-		mgr.getTimeEntryManager().createTimeEntry(timeEntry);
+		//mgr.getTimeEntryManager().createTimeEntry(timeEntry);
 		saveProfile(timeEntry);
 	}
 
@@ -113,7 +111,7 @@ public class RedmineConnector {
 	}
 
 	public void connect(String user, String password) {
-		mgr = RedmineManagerFactory.createWithUserAuth(URI, user, password);
+		mgr = RedmineManagerFactory.createWithUserAuth(System.getProperty("easy.url"), user, password);
 	}
 
 	public void logTime(Properties properties) throws RedmineException {

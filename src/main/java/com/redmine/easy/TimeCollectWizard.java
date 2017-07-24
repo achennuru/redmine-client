@@ -54,7 +54,13 @@ public class TimeCollectWizard extends JDialog {
 
 				add(thumb);
 				add(new JLabel("                                                               "));
+				JTextField urlField = new JTextField(30);
+				urlField.setName("urlField");
+				add(new JLabel("URL"));
+				add(urlField);
+				
 				JTextField userField = new JTextField(30);
+
 				userField.setName("userField");
 				add(new JLabel("UserName"));
 				add(userField);
@@ -64,6 +70,9 @@ public class TimeCollectWizard extends JDialog {
 				userField.setPreferredSize(new Dimension(50, 20));
 				add(new JLabel("Password"));
 				add(passwordField);
+				if (properties.getProperty("url") != null) {
+					urlField.setText(properties.getProperty("url"));
+				}
 				if (properties.getProperty("user") != null) {
 					userField.setText(properties.getProperty("user"));
 				}
@@ -450,6 +459,7 @@ public class TimeCollectWizard extends JDialog {
 	private void saveLogin(WizardSettings settings) {
 		try {
 			Properties properties = new Properties();
+			properties.put("url", (String) settings.get("urlField"));
 			properties.put("user", (String) settings.get("userField"));
 			properties.put("password", (String) settings.get("passwordField"));
 			properties.store(new FileWriter(new File(TEMP_FILE)), "");

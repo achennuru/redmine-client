@@ -16,6 +16,7 @@ public class LoginUtil {
 		} catch (Exception e) {
 
 		}
+		System.setProperty("easy.url",properties.getProperty("url"));
 		if (properties.isEmpty() && !gui) {
 			return askUserInput();
 		}
@@ -25,12 +26,16 @@ public class LoginUtil {
 	private static Properties askUserInput() {
 		Properties properties = new Properties();
 		Scanner input = new Scanner(System.in);
+		String url;
 		String username;
 		String password;
+		System.out.println("url: ");
+		url = input.next();
 		System.out.println("username: ");
 		username = input.next();
 		System.out.println("password: ");
 		password = input.next();
+		properties.put("url", url);
 		properties.put("user", username);
 		properties.put("password", password);
 		try {
@@ -38,6 +43,7 @@ public class LoginUtil {
 		} catch (Exception e) {
 
 		}
+		System.setProperty("easy.url",properties.getProperty("url"));
 		return properties;
 	}
 }
