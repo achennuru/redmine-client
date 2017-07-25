@@ -16,7 +16,9 @@ public class LoginUtil {
 		} catch (Exception e) {
 
 		}
-		System.setProperty("easy.url",properties.getProperty("url"));
+		if(properties.getProperty("url") != null) {	
+			System.setProperty("easy.url",properties.getProperty("url"));
+		}
 		if (properties.isEmpty() && !gui) {
 			return askUserInput();
 		}
